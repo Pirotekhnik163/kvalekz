@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея изображений</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Галерея изображений</h1>
+            <p>Найдите свои любимые изображения</p>
+        </header>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="category">Категория:</label>
+                <select id="category">
+                    <option value="">Все категории</option>
+                    <option value="Природа">Природа</option>
+                    <option value="Города">Города</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="search">Поиск по названию:</label>
+                <input type="text" id="search" placeholder="Введите название...">
+            </div>
+            
+            <button id="apply-filter">Применить фильтр</button>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-value" id="total-count">0</span>
+                <span class="stat-label">Всего изображений</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="avg-rating">0</span>
+                <span class="stat-label">Средний рейтинг</span>
+            </div>
+        </div>
+        
+        <div class="gallery-controls">
+            <h2>Изображения</h2>
+            <button id="sort-rating" class="sort-btn">Сортировать по рейтингу ▼</button>
+        </div>
+        
+        <div id="gallery" class="gallery-grid"></div>
+        
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="">
+                <p><strong>Категория:</strong> <span id="modal-category"></span></p>
+                <p><strong>Рейтинг:</strong> <span id="modal-rating"></span></p>
+                <p><strong>URL:</strong> <a id="modal-url" href="" target="_blank"></a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
